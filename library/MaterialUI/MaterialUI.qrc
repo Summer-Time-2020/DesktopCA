@@ -45,8 +45,9 @@
         <file>Interface/MaterialDialogTimePicker.qml</file>
         <file>Interface/MaterialDialogTextArea.qml</file>
         <file>Interface/MaterialAnimation.qml</file>
-        <file>Interface/MaterialTDragRect.qml</file>       
-        <file>Interface/MateriaTResizeBorder.qml</file>     
-        <file>Interface/MateriaTMoveArea.qml</file>                 
+        <file>Interface/MaterialTDragRect.qml</file>
+        <file>Interface/MaterialTResizeBorder.qml</file>
+        <file>Interface/MaterialTMoveArea.qml</file>
+        <file>Interface/MaterialButtomImage.qml</file>
     </qresource>
 </RCC>

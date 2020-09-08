@@ -1,0 +1,10 @@
+#ifndef CERTREQUEST_GROUP_H
+#define CERTREQUEST_GROUP_H
+
+
+#include "certrequest.h"
+
+#define CERTREQUESTGROUP_INITIALIZA \
+    CERTREQUEST_INITIALIZA;
+
+#endif//CERTREQUEST_GROUP_H

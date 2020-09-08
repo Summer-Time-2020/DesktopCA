@@ -5,33 +5,118 @@ import QtGraphicalEffects 1.0
 import "qrc:/MaterialUI/Interface/"
 
 Window {
-    id : root2
+    id : root
     visible: true
-    width: 640
-    height: 480
-
-    flags:Qt.FramelessWindowHint   //隐藏外框
-
-    MateriaTMoveArea {    // 窗口可拖动设置
-        anchors.fill: parent
-        control: root
-    }
-
-   MateriaTResizeBorder { // 窗口可变大小设置
-       anchors.fill: parent
-       control: root2
-       minimumWidth: 500
-       minimumHeight: 400
-   }
+    width: 800
+    height: 600
+    title: qsTr("Desktop CA  ")
 
     Rectangle {
-        id: mainTitle                       //创建标题栏
-        anchors.top: parent.top             //对标题栏定位
+        id: mainTitle      //标题栏
+        anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        height: 25
-        color: "#000"
+        height:0
+        color: "#CDCEC0"
+
+        //MaterialButton{
+        //    height:parent.height
+        //    width:50
+        //    textColor : "#000"
+        //    text : "Help"
+         //   backgroundColor : "#CDCEC0"
+        //    textSize :13
+        //}
     }
+
+    Rectangle {
+        id: upTitle      //上栏
+        anchors.right: parent.right
+        height:20
+        width: root.width - leftTitle.width
+        y : mainTitle.y + mainTitle.height
+        color: "#333333"
+    }
+
+    Rectangle {
+        id: leftTitle          //左栏
+        anchors.left: parent.left
+        height: parent.height - mainTitle.height
+        width: 70
+        y : mainTitle.height
+        color: "#333333"
+
+        MaterialButtomImage{
+            id : requestButton
+            img_src : "/image/request.png"
+            btn_txt : "证书请求"
+            clr_exit : "#333333"
+            clr_enter : "#666666"
+            clr_click :　"#82A3B2"
+            color : "#333333"
+            clr_text : "#ffffff"
+            width : parent.width
+            height :parent.width
+            anchors.top: parent.top
+            qrcLocation : "qrc:/CertRequest/CertRequest.qml"
+        }
+        MaterialButtomImage{
+            id : manageButton
+            img_src : "/image/manage.png"
+            btn_txt : "证书管理"
+            clr_exit : "#333333"
+            clr_enter : "#666666"
+            clr_click :　"#82A3B2"
+            color : "#333333"
+            clr_text : "#ffffff"
+            width : parent.width
+            height :parent.width
+            anchors.top: requestButton.bottom
+        }
+        MaterialButtomImage{
+            id : systenmButton
+            img_src : "/image/system.png"
+            btn_txt : "配置"
+            clr_exit : "#333333"
+            clr_enter : "#666666"
+            clr_click :　"#82A3B2"
+            clr_text : "#ffffff"
+            color : "#333333"
+            width : parent.width
+            height :parent.width
+            anchors.top: manageButton.bottom
+        }
+
+        MaterialButtomImage{
+            id : helpButton
+            img_src : "/image/help.png"
+            btn_txt : "帮助"
+            clr_exit : "#333333"
+            clr_enter : "#666666"
+            clr_click :　"#82A3B2"
+            clr_text : "#ffffff"
+            color : "#333333"
+            width : parent.width
+            height :parent.width
+            anchors.top: systenmButton.bottom
+            qrcLocation : "qrc:/Help/Help.qml"
+        }
+    }
+
+    Rectangle{
+        id : mainCanvas
+        anchors.top: upTitle.bottom
+        anchors.left: leftTitle.right
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        color: "#ffffff"
+
+        Loader{
+           //source: "qrc:/Help/Help.qml"
+           id: mainCanvasId
+       }
+    }
+
 }
 
 

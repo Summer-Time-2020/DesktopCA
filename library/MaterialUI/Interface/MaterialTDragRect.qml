@@ -4,8 +4,8 @@ Item {
     id: root
     property alias containsMouse: mouseArea.containsMouse
     signal posChange(int xOffset, int yOffset)
-    implicitWidth: 100   //这里隐式的宽
-    implicitHeight: 100  //这里隐式的高
+    implicitWidth: 30   //这里隐式的宽
+    implicitHeight: 30  //这里隐式的高
     property int posType: Qt.ArrowCursor
 
     //5.10之前, qml是不能定义枚举的，用只读的int属性代替一下。

@@ -32,6 +32,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+include( $$PWD/components/components.pri )
+
 macx {
     ICON = $$PWD/icon/icon.icns
 }
@@ -39,3 +41,11 @@ macx {
 win32 {
     RC_ICONS = $$PWD/icon/icon.ico
 }
+
+win32: LIBS += -L$$PWD/third/openssl/lib/ -llibeay32
+win32: LIBS += -L$$PWD/third/openssl/lib/ -lssleay32
+
+INCLUDEPATH += $$PWD/third/openssl/include
+DEPENDPATH += $$PWD/third/openssl/include
+
+

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/CertRequest">
+        <file>CertRequest.qml</file>
+    </qresource>
+</RCC>
