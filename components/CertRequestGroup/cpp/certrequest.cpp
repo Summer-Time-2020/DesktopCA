@@ -4,7 +4,7 @@
 #include <QDesktopServices>
 #include <QUrl>
 
-using namespace namespace CertRequest;
+using namespace  CertRequest;
 
 void Manage::openGitHubLink()
 {

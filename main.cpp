@@ -3,6 +3,7 @@
 
 // Group import
 #include <HelpGroup>
+#include <CertRequestGroup>
 
 int main(int argc, char *argv[])
 {
@@ -11,7 +12,9 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     // Group initializa
+    CERTREQUESTGROUP_INITIALIZA
     HELPGROUP_INITIALIZA
+
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));

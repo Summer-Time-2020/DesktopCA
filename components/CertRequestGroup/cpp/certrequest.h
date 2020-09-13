@@ -1,11 +1,11 @@
-#ifndef HELP_H
-#define HELP_H
+#ifndef CERTREQUEST_H
+#define CERTREQUEST_H
 
 // Qt lib import
 #include <QObject>
 #include <QPointer>
 
-#define HELP_INITIALIZA                                               \
+#define CERTREQUEST_INITIALIZA                                               \
 {                                                                       \
     qmlRegisterType<CertRequest::Manage>("CertRequest", 1, 0, "CertRequestManage"); \
 }
@@ -31,4 +31,4 @@ public slots:
 
 }
 
-#endif//HELP_H
+#endif//CERTREQUEST_H

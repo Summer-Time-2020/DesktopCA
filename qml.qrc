@@ -4,6 +4,7 @@
         <file>image/request.png</file>
         <file>image/system.png</file>
         <file>image/manage.png</file>    
-        <file>image/help.png</file>    
+        <file>image/help.png</file>  
+        <file>image/file.png</file>              
     </qresource>
 </RCC>

@@ -11,6 +11,9 @@ Window {
     height: 600
     title: qsTr("Desktop CA  ")
 
+    minimumWidth: 400
+    minimumHeight: 300
+
     Rectangle {
         id: mainTitle      //标题栏
         anchors.top: parent.top
@@ -105,17 +108,21 @@ Window {
 
     Rectangle{
         id : mainCanvas
-        anchors.top: upTitle.bottom
+        width: upTitle.width
+        height: leftTitle.height
+
         anchors.left: leftTitle.right
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        color: "#ffffff"
+        anchors.top : upTitle.bottom
+        anchors.right : root.right
+        anchors.bottom: root.bottom
+        color: "#ffff33"
 
         Loader{
-           //source: "qrc:/Help/Help.qml"
+           source: "qrc:/CertRequest/CertRequest.qml"
            id: mainCanvasId
-       }
+        }
     }
+
 
 }
 
