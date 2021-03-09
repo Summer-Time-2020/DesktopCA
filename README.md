@@ -7,8 +7,6 @@ DesktopCA 是一款CA桌面终端软件，提供CA服务：
 
 生产环境：qt5.14.2
 
-第一个版本预计9月30日发布；
-
 Copyright (c) Summer-Time-2020.  All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
